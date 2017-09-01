@@ -1,0 +1,36 @@
+{
+  "name": "webdriverjs-accessibility",
+  "version": "2.0.0",
+  "description": "accessibility testing in nodejs using webdriverjs and Google Chrome accessibility developer tools",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "debug": "^3.0.1",
+    "request": "^2.81.0",
+    "selenium-webdriver": "^2.53.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikulkarni/webdriverjs-accessibility.git"
+  },
+  "keywords": [
+    "webdriverjs",
+    "accessibility",
+    "google",
+    "chrome",
+    "dev"
+  ],
+  "author": "Nilesh Kulkarni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikulkarni/webdriverjs-accessibility/issues"
+  },
+  "homepage": "https://github.com/nikulkarni/webdriverjs-accessibility#readme"
+}

@@ -50,14 +50,33 @@ For more logging just set environment variable `DEBUG=accessibility*` before run
 runAccessibilityAudit(webdriver, driver)
 
 `@argument webdriver` Please check [here](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index.html)
-`@argument driver` Please check [here](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_ThenableWebDriver.html)
+`
+@argument driver` Please check [here](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_ThenableWebDriver.html)
 
 `@returns {Promise} resolves to an Object {results: {error: errors, warning: warnings}, screenshot:byte[]}`
 
 ### Example
 Please check the example [here](example/accessibilityTest.js)
 
-### Sample Screenshot
+### Sample Accessibility Object (`result.results`)
+
+```javascript
+{ errors: 
+   [ { name: 'Error: AX_TEXT_01 (Controls and media elements should have labels) failed on the following element:',
+       link: 'See https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_text_01--controls-and-media-elements-should-have-labels for more information.',
+       elements: [Array] } ],
+  warnings: 
+   [ { name: 'Warning: AX_FOCUS_01 (These elements are focusable but either invisible or obscured by another element) failed on the following element:',
+       link: 'See https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_focus_01--these-elements-are-focusable-but-either-invisible-or-obscured-by-another-element for more information.',
+       elements: [Array] },
+     { name: 'Warning: AX_TEXT_02 (Images should have an alt attribute) failed on the following elements (1 - 3 of 3):',
+       link: 'See https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_text_02--images-should-have-an-alt-attribute-unless-they-have-an-aria-role-of-presentation for more information.',
+       elements: [Array] } ] 
+}
+
+```
+
+### Sample Screenshot with errors and warnings (`result.screenshot`)
 ![Screen shot](accessibility.png?raw=true)
 
 
